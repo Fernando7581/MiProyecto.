@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La falta de agua potable en Ecatepec</title>
+  <!-- Font Awesome CDN -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: rgba(0,0,0,0.7);
+      padding: 30px 40px;
+      border-radius: 20px;
+      max-width: 900px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      font-weight: 700;
+      font-size: 2.8rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #9ae3ff;
+      text-shadow: 1px 1px 5px #08294a;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .menu button {
+      background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+      border: none;
+      width: 100px;
+      height: 100px;
+      border-radius: 20px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      font-size: 3rem;
+      color: #022f1f;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      filter: drop-shadow(0 4px 3px rgba(0,0,0,0.4));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu button:hover {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 12px 25px rgba(0, 255, 200, 0.7);
+      background: linear-gradient(135deg, #38f9d7 0%, #43e97b 100%);
+      color: #004d33;
+    }
+
+    .menu button.home {
+      background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+      color: #663e00;
+    }
+    .menu button.home:hover {
+      background: linear-gradient(135deg, #ffd200 0%, #f7971e 100%);
+      color: #996c00;
+    }
+
+    .menu button.news {
+      background: linear-gradient(135deg, #ff6a6a 0%, #ff8e8e 100%);
+      color: #660000;
+    }
+    .menu button.news:hover {
+      background: linear-gradient(135deg, #ff8e8e 0%, #ff6a6a 100%);
+      color: #990000;
+    }
+
+    .menu button.contact {
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+      color: #eae3f8;
+    }
+    .menu button.contact:hover {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #c7b8e4;
+    }
+
+    .menu button.location {
+      background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+      color: #083a56;
+    }
+    .menu button.location:hover {
+      background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 100%);
+      color: #0a5270;
+    }
+
+    .section-content {
+      display: none;
+      animation: fadeIn 0.8s ease forwards;
+      color: #e0f7ff;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .section-content.active {
+      display: block;
+    }
+
+    /* Contact icons style */
+    #contact p span {
+      font-size: 1.8rem;
+      margin: 0 10px;
+      cursor: pointer;
+      user-select: none;
+      transition: color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      vertical-align: middle;
+    }
+    #contact p span:hover {
+      color: #43e97b;
+      transform: scale(1.2);
+    }
+
+    /* Contact form style */
+    #contactForm label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    #contactForm input, #contactForm textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-top: 0.3rem;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #contactForm button[type="submit"] {
+      margin-top: 1rem;
+      background: #43e97b;
+      border: none;
+      padding: 0.8rem 1.8rem;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #022f1f;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background 0.3s ease;
+    }
+    #contactForm button[type="submit"]:hover {
+      background: #30c563;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>La falta de agua potable en Ecatepec</h1>
+
+    <div class="menu">
+      <button class="home" data-target="home" title="Inicio"><i class="fa-solid fa-house"></i></button>
+<button class="news" data-target="news" title="Problema"><i class="fa-solid fa-newspaper"></i></button>
+<button class="contact" data-target="contact" title="Contacto"><i class="fa-solid fa-envelope"></i></button>
+<button class="location" data-target="location" title="Ubicación"><i class="fa-solid fa-map-marker-alt"></i></button>
+    </div>
+
+    <div id="home" class="section-content active">
+      <h2>Bienvenido</h2>
+      <p>Conciencia, acción y soluciones para mejorar el acceso al agua potable en Ecatepec.</p>
+    </div>
+
+    <div id="news" class="section-content">
+      <h2>El Problema</h2>
+      <p>En Ecatepec, miles de familias enfrentan la falta de agua potable, afectando salud y calidad de vida.</p>
+    </div>
+
+    <div id="contact" class="section-content">
+      <h2>Contáctanos</h2>
+      <p>
+        <span title="Facebook" onclick="window.open('https://facebook.com', '_blank')" style="color:#3b5998;">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </span> 
+        <span title="Instagram" onclick="window.open('https://instagram.com', '_blank')" style="color:#e4405f;">
+          <i class="fab fa-instagram"></i> Instagram
+        </span> 
+        <span title="Gmail" onclick="window.open('mailto:tuemail@gmail.com')" style="color:#d44638;">
+          <i class="fas fa-envelope"></i> Gmail
+        </span>
+      </p>
+      <button id="joinBtn" style="margin-top: 1rem; padding: 0.6rem 1.5rem; font-size: 1.1rem; border-radius: 8px; border:none; background: #43e97b; color: #222; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.15); transition: background 0.3s;">
+        Únete
+      </button>
+
+      <form id="contactForm" style="margin-top: 1rem; display: none; max-width: 400px; margin-left:auto; margin-right:auto;">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required />
+        
+        <label for="email">Correo:</label>
+        <input type="email" id="email" name="email" required />
+        
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="4" required></textarea
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<div id="location" class="section-content">
+  <h2>Ubicación</h2>
+  <p>Ecatepec de Morelos, Estado de México</p>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.312271072183!2d-99.03398848464454!3d19.601131286796337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8a71d9e3b37%3A0x26303156e738b792!2sEcatepec%20de%20Morelos%2C%20Estado%20de%20M%C3%A9xico!5e0!3m2!1ses!2smx!4v1686603153620!5m2!1ses!2smx"
+    width="100%"
+    height="250"
+    style="border:0; border-radius: 15px;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div> 
+
+<script>
+  const buttons = document.querySelectorAll('.menu button');
+  const sections = document.querySelectorAll('.section-content');
+  const joinBtn = document.getElementById('joinBtn');
+  const contactForm = document.getElementById('contactForm');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const target = button.getAttribute('data-target');
+
+      sections.forEach(section => {
+        if (section.id === target) {
+          section.classList.add('active');
+        } else {
+          section.classList.remove('active');
+        }
+      });
+
+      // Ocultar formulario de contacto si está abierto y no estamos en contacto
+      if (target !== 'contact') {
+        contactForm.style.display = 'none';
+        joinBtn.textContent = 'Únete';
+      }
+    });
+  });
+
+  joinBtn.addEventListener('click', () => {
+    if (contactForm.style.display === 'none' || contactForm.style.display === '') {
+      contactForm.style.display = 'block';
+      joinBtn.textContent = 'Cerrar';
+    } else {
+      contactForm.style.display = 'none';
+      joinBtn.textContent = 'Únete';
+    }
+  });
+
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('¡Gracias por unirte! Nos pondremos en contacto pronto.');
+    contactForm.reset();
+    contactForm.style.display = 'none';
+    joinBtn.textContent = 'Únete';
+  });
+</script>
+
+</body>
+</html>

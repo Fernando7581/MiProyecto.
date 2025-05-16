@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Proyecto - Falta de acceso a agua potable en Ecatepec</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f5f7fa;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    /* Diferentes colores para cada sección */
+    section.intro {
+      background: #e3f2fd; /* azul muy claro */
+      padding: 20px 25px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    section.problema {
+      background: #fff3e0; /* naranja claro */
+      padding: 20px 25px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    section.causas {
+      background: #e8f5e9; /* verde claro */
+      padding: 20px 25px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    section.consecuencias {
+      background: #fffde7; /* amarillo claro */
+      padding: 20px 25px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    section.soluciones {
+      background: #f3e5f5; /* morado claro */
+      padding: 20px 25px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    section.accion {
+      background: #fff0f6; /* rosa claro */
+      padding: 20px 25px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    section.tabla {
+      background: #e0f7fa; /* cian claro */
+      padding: 20px 25px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    section.cronograma {
+      background: #f9fbe7; /* verde amarillento muy suave */
+      padding: 20px 25px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px 15px;
+      text-align: left;
+      vertical-align: top;
+      background-color: #fafafa;
+    }
+    th {
+      background-color: #1976d2;
+      color: white;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    tbody tr:nth-child(even) td {
+      background-color: #e3f2fd;
+    }
+    tbody tr:hover td {
+      background-color: #90caf9;
+      cursor: pointer;
+    }
+
+    /* Tablas Gantt con color personalizado */
+    .fase-inicial thead th {
+      background-color: #0288d1 !important;
+    }
+    .fase-desarrollo thead th {
+      background-color: #f57c00 !important;
+    }
+    .fase-consecuencia thead th {
+      background-color: #388e3c !important;
+    }
+
+    h2 span {
+      font-size: 1.2rem;
+      vertical-align: middle;
+    }
+    ul li {
+      margin-bottom: 8px;
+      padding-left: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Proyecto: Falta de acceso a agua potable en Ecatepec</h1>
+  </header>
+
+  <section>
+    <h2>Introducción</h2>
+    <p>En Ecatepec, la falta de acceso a agua potable representa un problema grave que afecta la salud y calidad de vida de sus habitantes. Este proyecto tiene como objetivo identificar las causas principales y proponer soluciones técnicas viables para mejorar el acceso al agua segura en las zonas más afectadas.</p>
+  </section>
+<section>
+    <h2>¿Cuál es el problema?</h2>
+    <p>En Ecatepec, Estado de México, miles de familias enfrentan cada día la falta de agua potable. El servicio es irregular, muchas veces llega solo unas horas a la semana, y en algunas colonias simplemente no llega. Esta situación afecta la salud, la higiene y la calidad de vida de quienes vivimos aquí.</p>
+    <p>Según datos del INEGI y medios locales, más del 40% de los hogares en Ecatepec no recibe agua de manera continua. Para muchas personas, la única opción es pagar pipas privadas o cargar cubetas desde lugares lejanos.</p>
+    <p>Este no es un problema nuevo, pero cada año se vuelve más grave. La población crece, la infraestructura está vieja y el agua no alcanza para todos.</p>
+  </section>
+
+  <section>
+    <h2><span class="emoji">🔍</span> Causas del problema</h2>
+    <ul>
+      <li><strong>Infraestructura vieja y en mal estado:</strong> Muchas tuberías tienen fugas, están oxidadas o no dan abasto para tanta gente.</li>
+      <li><strong>Crecimiento urbano desordenado:</strong> La ciudad creció muy rápido, sin una planeación adecuada para servicios básicos como el agua.</li>
+      <li><strong>Falta de inversión:</strong> Durante años no se ha destinado suficiente dinero público para mejorar el sistema hidráulico.</li>
+      <li><strong>Contaminación de fuentes de agua:</strong> Ríos y pozos cercanos están contaminados, lo que reduce la cantidad de agua potable disponible.</li>
+      <li><strong>Mala distribución:</strong> Hay zonas que reciben más agua que otras, sin un control justo ni eficiente.</li>
+    </ul>
+  </section>
+<section>
+    <h2><span class="emoji">⚠️</span> Consecuencias</h2>
+    <ul>
+      <li><strong>Problemas de salud:</strong> Sin agua limpia, aumentan enfermedades gastrointestinales, infecciones en la piel y otras complicaciones por mala higiene.</li>
+      <li><strong>Condiciones difíciles en escuelas y hospitales:</strong> Muchos planteles educativos no pueden operar con normalidad si no hay agua para baños o limpieza básica.</li>
+      <li><strong>Gastos extra para las familias:</strong> Muchas personas tienen que comprar agua en pipas o garrafones, lo cual representa un gasto que no todas pueden cubrir.</li>
+      <li><strong>Desigualdad:</strong> Mientras algunas zonas sí reciben agua regularmente, otras llevan semanas o incluso meses sin el servicio, creando una brecha entre comunidades.</li>
+      <li><strong>Impacto emocional:</strong> La frustración, el estrés y el enojo por no tener acceso a un derecho básico como el agua genera malestar social.</li>
+    </ul>
+  </section>
+<section>
+    <h2><span class="emoji">💡</span> Soluciones propuestas</h2>
+    <ul>
+      <li>Captación de agua de lluvia</li>
+      <li>Reparación y mantenimiento de redes hidráulicas</li>
+      <li>Distribución equitativa del servicio</li>
+      <li>Educación y cultura del agua</li>
+      <li>Participación ciudadana</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🙋‍♀️ ¿Qué puedes hacer tú?</h2>
+    <ul>
+      <li>Ahorra agua en casa</li>
+      <li>Reporta fugas y desperdicios</li>
+      <li>Apoya iniciativas locales</li>
+      <li>Infórmate y comparte</li>
+      <li>Exige a las autoridades</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📋 Tabla de actividades</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Actividad</th>
+          <th>Tarea</th>
+          <th>Recursos materiales</th>
+          <th>Recursos tecnológicos</th>
+          <th>Recursos financieros</th>
+          <th>Recursos humanos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1. Diagnóstico del problema</td>
+          <td>1.1 Levantar encuestas en zonas afectadas</td>
+          <td>Cuadernos, lápices</td>
+          <td>Formulario digital</td>
+          <td>Impresión y traslado</td>
+          <td>Encuestadores</td>
+        </tr>
+        <tr>
+          <td>2. Investigación de alternativas</td>
+          <td>2.1 Analizar soluciones aplicadas en otros municipios</td>
+          <td>Libros, artículos</td>
+          <td>Acceso a internet</td>
+          <td>N/A</td>
+          <td>Investigadores</td>
+        </tr>
+        <tr>
+          <td>3. Planificación de propuesta</td>
+          <td>3.1 Diseñar solución técnica viable</td>
+          <td>Planos, esquemas</td>
+          <td>Software de diseño</td>
+          <td>Consultoría</td>
+          <td>Ingeniero civil</td>
+        </tr>
+        <tr>
+          <td>4. Búsqueda de apoyo institucional</td>
+          <td>4.1 Contactar con autoridades y ONGs</td>
+          <td>Oficios y formatos</td>
+          <td>Correo electrónico</td>
+          <td>Transporte</td>
+          <td>Gestor comunitario</td>
+        </tr>
+        <tr>
+          <td>5. Implementación piloto</td>
+          <td>5.1 Instalar purificadores o cisternas</td>
+          <td>Purificadores, herramientas</td>
+          <td>Manuales técnicos</td>
+          <td>Adquisición de equipo</td>
+          <td>Técnicos instaladores</td>
+        </tr>
+        <tr>
+          <td>6. Evaluación y mejora</td>
+          <td>6.1 Monitorear impacto y recopilar opiniones</td>
+          <td>Cuestionarios, cámaras</td>
+          <td>Base de datos</td>
+          <td>Movilidad</td>
+          <td>Equipo de evaluación</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>📅 Cronograma (Diagrama de Gantt)</h2>
+
+    <h3>Fase Inicial (28 abril – 31 mayo)</h3>
+    <table class="fase-inicial">
+      <thead>
+        <tr>
+          <th>Actividad</th>
+          <th>Tiempo actividad</th>
+          <th>Inicio</th>
+          <th>Conclusión</th>
+          <th>Tareas</th>
+          <th>Recursos Materiales</th>
+          <th>Recursos Tecnológicos</th>
+          <th>Recursos Financieros</th>
+          <th>Responsable de Actividad y Tareas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Diagnóstico del problema</td>
+          <td>5 semanas</td>
+          <td>28-abr-25</td>
+          <td>31-may-25</td>
+          <td>1.1 Levantar encuestas en zonas afectadas</td>
+          <td>Cuadernos, lápices</td>
+          <td>Formulario digital</td>
+          <td>Impresión y traslado</td>
+          <td>Encuestadores</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>1.2 Analizar soluciones de otros municipios</td>
+          <td>Libros, artículos</td>
+          <td>Acceso a internet</td>
+          <td>N/A</td>
+          <td>Investigadores</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Fase Desarrollo (3 junio – 30 junio)</h3>
+    <table class="fase-desarrollo" style="margin-top: 1rem;">
+      <thead>
+        <tr>
+          <th>Actividad</th>
+          <th>Tiempo actividad</th>
+          <th>Inicio</th>
+          <th>Conclusión</th>
+          <th>Tareas</th>
+          <th>Recursos Materiales</th>
+          <th>Recursos Tecnológicos</th>
+          <th>Recursos Financieros</th>
+          <th>Responsable de Actividad y Tareas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Planificación de propuesta</td>
+          <td>4 semanas</td>
+          <td>3-jun-25</td>
+          <td>30-jun-25</td>
+          <td>2.1 Diseñar técnicas de solución viable</td>
+          <td>Planos, esquemas</td>
+          <td>Software de diseño</td>
+          <td>Consultoría</td>
+          <td>Ingeniero civil</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>2.2 Contactar con autoridades y ONG's</td>
+          <td>Oficios y formatos</td>
+          <td>Correo electrónico</td>
+          <td>Transporte</td>
+          <td>Gestor comunitario</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Fase Consecución (1 julio – 15 octubre)</h3>
+    <table class="fase-consecuencia" style="margin-top: 1rem;">
+      <thead>
+        <tr>
+          <th>Actividad</th>
+          <th>Tiempo actividad</th>
+          <th>Inicio</th>
+          <th>Conclusión</th>
+          <th>Tareas</th>
+          <th>Recursos Materiales</th>
+          <th>Recursos Tecnológicos</th>
+          <th>Recursos Financieros</th>
+          <th>Responsable de Actividad y Tareas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Implementación y evaluación</td>
+          <td>14 semanas</td>
+          <td>1-jul-25</td>
+          <td>15-oct-25</td>
+          <td>3.1 Instalar purificadores o cisternas</td>
+          <td>Purificadores, herramientas</td>
+          <td>Manuales técnicos</td>
+          <td>Adquisición de equipo</td>
+          <td>Técnicos instaladores</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>3.2 Monitorear impacto y recopilar opiniones</td>
+          <td>Cuestionarios, cámaras</td>
+          <td>Base de datos</td>
+          <td>Movilidad</td>
+          <td>Gestor comunitario / Equipo de seguimiento</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
+</body>
+</html>
